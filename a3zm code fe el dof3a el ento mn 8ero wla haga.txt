@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+void main()
+{
+	int r = 0, c = 0, a, t = 0;
+	char x[44][96];
+	for (r = 0;r < 44;r++)
+	{
+		for (c = 0;c < 96;c++)
+		{ 
+			cout << "r: " << r+1 << "c: " << c+1 << endl;
+			cin >> x[r][c];
+		}
+	}
+	for (r = 0;r < 44;r++)
+	{
+		for (c = 0;c < 96;c++)
+		{
+			if (x[r][c] != '$' && x[r][c] != ' ')
+			{
+				cout << "x[r+" << r << "]"
+					<< "[c+" << c << "] = '"
+					<< x[r][c] << "'" << ";";
+				t++;
+				if (t % 3 == 0)
+				{
+					cout << endl;
+				}
+			}
+		}
+	}
+	cout << endl;
+	for (r = 0;r < 44;r++)
+	{
+		for (c = 0;c < 106;c++)
+		{
+			if (x[r][c] != '$')
+			{
+               cout << x[r][c] ;
+			}
+			else {
+				cout << ' ';
+			}
+
+			
+		}
+		cout<< endl;
+	}
+}
